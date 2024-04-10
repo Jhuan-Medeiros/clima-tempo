@@ -41,4 +41,4 @@ No body do index.html temos a tela de carregamento que é uma simulação feita 
 No script temos duas funções com addEventListener para que possam ser utilizados o botão de pesquisa e a tecla enter para que seja ativado a função que procura os dados na API.  Dentro do try temos a resposta da API que por metódo de if e else if define a mudança do símbolo do clima, outro if que define o fundo baseado na condição climática e um if que se consegue acessar os dados da API cria um innerHtml com as respostas da API, imagens e fundo.  Por fim temos a tratação dos erros com metódo catch.
 
 # Sua aplicação ficará assim: 
-![Imagem]
+![Imagem](https://github.com/Viniciusulpicio/Api_openweathermap/assets/145928303/0fc92b1f-466a-46d1-938a-627d3ec81283)
