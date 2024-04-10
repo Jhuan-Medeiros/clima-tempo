@@ -1,14 +1,17 @@
+/* Definindo estilos globais */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* Configuração das variáveis globais */
 :root {
     background-image: url(./img/fundo_principal.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/* Estilos para o corpo da página */
 body {
     width: 100vw;
     height: 100vh;
@@ -17,11 +20,12 @@ body {
     display: flex;
 }
 
+/* Estilos para o conteúdo principal */
 .conteudo {
     background: rgb(255, 255, 248);
     margin: auto;
     width: 90%;
-    height: 90vh;
+    height: 80%;
     border-radius: 35px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -31,7 +35,7 @@ body {
     justify-content: space-evenly;
 }
 
-
+/* Estilos para a caixa de pesquisa */
 .search-box {
     display: flex;
     width: 90vw;
@@ -42,7 +46,7 @@ body {
     flex-wrap: nowrap;
 }
 
-
+/* Estilos para o campo de entrada de texto da pesquisa */
 #search-txt {
     border: 1px solid #000000;
     border-radius: 5px;
@@ -52,30 +56,32 @@ body {
     font-size: x-large;
     border-radius: 40px;
     width: 30vw;
-    height: 6vh;
+    height: 3vh;
     text-align: center;
 }
 
+/* Estilos para ícone de localização */
 #local {
     width: 100px;
-
 }
 
+/* Estilos para ícone de busca */
 #search-icon {
     width: 100px;
 }
 
-
+/* Estilos para ícone de mundo */
 #mundo {
     width: 400px;
 }
 
+/* Estilos para ícones de umidade e vento */
 .iconvento,
 .iconumidade {
     width: 170px;
 }
 
-
+/* Estilos para o contêiner geral dos dados do clima */
 .geral {
     transform: translate(-50%, -50%);
     display: flex;
@@ -86,33 +92,42 @@ body {
     align-content: stretch;
     flex-wrap: nowrap;
     margin-left: 50%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
+/* Estilos para os cartões de temperatura, umidade e vento */
 .card-temp {
     margin: 0 10%;
     text-align: center;
 }
 
-#clima-icon {
-    width: 50vh;
+/* Estilos para o ícone do clima */
+#clima-icon img {
+    width: 32vh;
+    margin-left: 7vw;
+    margin-top: 5%;
 }
 
+/* Estilos para o contêiner de resultado do clima */
 #climaResult {
     display: flex;
-    text-align: center;
 }
 
+/* Estilos para a temperatura */
 .temperatura {
     text-align: center;
     font-family: 'Shrikhand', cursive;
     font-size: 130%;
 }
 
+/* Estilos para a velocidade do vento e umidade */
 #velocidade_vento,
 #umidade_fonte {
     font-size: medium;
 }
 
+/* Estilos para o loader */
 #loader {
     display: none;
     position: fixed;
@@ -126,16 +141,16 @@ body {
     z-index: 999;
 }
 
+/* Estilos para a imagem do loader */
 #loader img {
     width: 600px;
     animation: spin 3s linear infinite;
     animation-delay: 1s;
 }
 
-
-/* /////////////////////////////////////////////////// */
-
+/* Media query para telas menores (max-width: 1200px) */
 @media (max-width: 1200px) {
+    /* Redefinição de estilos */
     * {
         padding: 0;
         margin: 0;
@@ -169,7 +184,6 @@ body {
         justify-content: space-evenly;
     }
 
-
     .search-box {
         display: flex;
         width: 90vw;
@@ -178,7 +192,6 @@ body {
         align-items: center;
         flex-wrap: nowrap;
     }
-
 
     #search-txt {
         border: 1px solid #000000;
@@ -195,13 +208,11 @@ body {
 
     #local {
         width: 100px;
-
     }
 
     #search-icon {
         width: 100px;
     }
-
 
     #mundo {
         width: 50vh;
@@ -211,7 +222,6 @@ body {
     .iconumidade {
         width: 12vw;
     }
-
 
     .geral {
         transform: translate(-50%, -50%);
@@ -223,16 +233,18 @@ body {
         align-content: stretch;
         flex-wrap: nowrap;
         margin-left: 50%;
-        margin-top: 4vh;
+        margin-bottom: 5%;
+        margin-top: 5%;
     }
 
     .card-temp {
-        margin: 0 8%;
+        margin: 0 6%;
         text-align: center;
     }
 
     #clima-icon {
-        width: 35vw;
+        width: 40vw;
+        padding-bottom: 5vh;
     }
 
     #climaResult {
@@ -271,11 +283,9 @@ body {
     }
 }
 
-/* /////////////////////////////////////////////////// */
-
-
-
+/* Media query para telas menores (max-width: 423px) */
 @media (max-width: 423px) {
+    /* Redefinição de estilos */
     * {
         padding: 0;
         margin: 0;
@@ -306,10 +316,9 @@ body {
         margin-top: 10vh;
     }
 
-
     .search-box {
         display: flex;
-        width: 80vw;
+        width: 90vw;
         padding: 0px;
         flex-direction: row;
         justify-content: space-between;
@@ -317,7 +326,6 @@ body {
         align-items: flex-start;
         flex-wrap: nowrap;
     }
-
 
     #search-txt {
         border: 1px solid #000000;
@@ -339,7 +347,6 @@ body {
         width: 100px;
     }
 
-
     #mundo {
         width: 400vh;
     }
@@ -348,7 +355,6 @@ body {
     .iconumidade {
         width: 170px;
     }
-
 
     .geral {
         transform: translate(-50%, -50%);
@@ -407,22 +413,3 @@ body {
         animation-delay: 1s;
     }
 }
-
-/* /////////////////////////////////////// */
-
-@media (max-width: 1024px) {
-    #clima-icon{
-        width: 35vh;
-    }
-
-    .geral{
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        width: 80%;
-        flex-direction: row-rever   se;
-        align-content: stretch;
-        flex-wrap: nowrap;
-    }
-}   
